@@ -1,7 +1,6 @@
 package pl.ubytes.entities;
 
 import javax.persistence.*;
-import javax.validation.constraints.NotNull;
 import java.io.Serializable;
 
 /**
