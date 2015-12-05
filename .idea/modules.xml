@@ -3,6 +3,8 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/u-fair.iml" filepath="$PROJECT_DIR$/u-fair.iml" />
+      <module fileurl="file://$PROJECT_DIR$/domain/u-fair-domain.iml" filepath="$PROJECT_DIR$/domain/u-fair-domain.iml" />
+      <module fileurl="file://$PROJECT_DIR$/server/u-fair-server.iml" filepath="$PROJECT_DIR$/server/u-fair-server.iml" />
     </modules>
   </component>
 </project>
