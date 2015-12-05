@@ -1,6 +1,7 @@
 package pl.ubytes.entities;
 
 import javax.persistence.*;
+import javax.validation.constraints.NotNull;
 import java.io.Serializable;
 
 /**
@@ -15,8 +16,12 @@ public class Book implements Serializable {
     private long id;
 
 
+    @Column(nullable = false)
     private String author;
+    @Column(nullable = false)
     private String title;
+    @Column(nullable = false)
+    private Integer bought;
 
     public Book() {}
 
@@ -34,5 +39,13 @@ public class Book implements Serializable {
 
     public void setTitle(String title) {
         this.title = title;
+    }
+
+    public Integer getBought() {
+        return bought;
+    }
+
+    public void setBought(Integer bought) {
+        this.bought = bought;
     }
 }

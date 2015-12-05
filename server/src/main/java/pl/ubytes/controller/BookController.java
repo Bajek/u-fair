@@ -23,7 +23,14 @@ public class BookController {
     @RequestMapping(value = "/get-all", method = RequestMethod.GET)
     @Transactional
     @ResponseBody
-    List home() {
+    List getAll() {
         return (List)bookRepository.findAll();
+    }
+
+    @RequestMapping(value = "/get-available", method = RequestMethod.GET)
+    @Transactional
+    @ResponseBody
+    List getAvailable() {
+        return (List)bookRepository.findByBought(0);
     }
 }
