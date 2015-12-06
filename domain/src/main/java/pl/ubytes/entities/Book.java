@@ -1,5 +1,7 @@
 package pl.ubytes.entities;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import javax.persistence.*;
 import java.io.Serializable;
 import java.sql.Timestamp;
@@ -13,7 +15,7 @@ public class Book implements Serializable {
 
     @Id
     @GeneratedValue(strategy= GenerationType.AUTO)
-    private long id;
+    private long bookId;
     @Column(nullable = false)
     private String author;
     @Column(nullable = false)
@@ -25,14 +27,7 @@ public class Book implements Serializable {
     private String publisher;
     @Column(nullable = false)
     private String image;
-    @Column(nullable = false)
-    private String email;
-    @Column(nullable = false)
-    private Timestamp date;
-    private String ip;
-    private String buyer;
     private String remarks;
-    private String childClass;
 
     public Book() {}
 
@@ -92,37 +87,6 @@ public class Book implements Serializable {
         this.image = image;
     }
 
-    public String getEmail() {
-        return email;
-    }
-
-    public void setEmail(String email) {
-        this.email = email;
-    }
-
-    public Timestamp getDate() {
-        return date;
-    }
-
-    public void setDate(Timestamp date) {
-        this.date = date;
-    }
-
-    public String getIp() {
-        return ip;
-    }
-
-    public void setIp(String ip) {
-        this.ip = ip;
-    }
-
-    public String getBuyer() {
-        return buyer;
-    }
-
-    public void setBuyer(String buyer) {
-        this.buyer = buyer;
-    }
 
     public String getRemarks() {
         return remarks;
@@ -132,11 +96,7 @@ public class Book implements Serializable {
         this.remarks = remarks;
     }
 
-    public String getChildClass() {
-        return childClass;
-    }
-
-    public void setChildClass(String childClass) {
-        this.childClass = childClass;
+    public long getBookId() {
+        return bookId;
     }
 }

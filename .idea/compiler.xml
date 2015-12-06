@@ -23,13 +23,19 @@
         <outputRelativeToContentRoot value="true" />
         <processorPath useClasspath="true" />
         <module name="u-fair-domain" />
+      </profile>
+      <profile default="false" name="Annotation profile for u-fair-server" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target\generated-test-sources\test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <processorPath useClasspath="true" />
         <module name="u-fair-server" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="u-fair" target="1.6" />
       <module name="u-fair-domain" target="1.6" />
-      <module name="u-fair-server" target="1.6" />
+      <module name="u-fair-server" target="1.7" />
     </bytecodeTargetLevel>
   </component>
 </project>
