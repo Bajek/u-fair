@@ -8,6 +8,7 @@ import org.springframework.transaction.annotation.EnableTransactionManagement;
 import org.springframework.transaction.annotation.Transactional;
 import pl.ubytes.entities.Book;
 import pl.ubytes.entities.BookStatus;
+import pl.ubytes.error.BookError;
 import pl.ubytes.repository.BookRepository;
 import pl.ubytes.repository.BookStatusRepository;
 import pl.ubytes.service.BookService;
@@ -42,7 +43,24 @@ public class DefaultBookService implements BookService {
         BookStatus bs = new BookStatus();
         bs.setBook(book);
         bookRepository.save(book);
-        bookStatusRepository.save(bs);
+    }
+
+    @Override
+    public void buyBook(Long id, BookStatus bookStatus) {
+        Book book = bookRepository.findOne(id);
+
+        if (book == null) {
+            throw new BookError("Book with id: " + id + " does not exist");
+        }
+
+        if (book.getBought().equals(1)) {
+            throw new BookError("Book with id: " + id + " has been already bought");
+        }
+
+        book.setBought(1);
+        bookRepository.save(book);
+        bookStatus.setBook(book);
+        bookStatusRepository.save(bookStatus);
 
     }
 }

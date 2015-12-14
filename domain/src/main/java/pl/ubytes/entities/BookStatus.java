@@ -16,7 +16,7 @@ public class BookStatus implements Serializable {
     private long status_id;
 
     @OneToOne
-    @JoinColumn(name = "book_id", nullable = false)
+    @JoinColumn(name = "book_id", nullable = false, unique = true)
     Book book;
 
     private String buyer;

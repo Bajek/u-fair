@@ -46,4 +46,9 @@ public class BookController {
     void addOne(@RequestBody Book book) {
         bookService.addBook(book);
     }
+
+    @RequestMapping(value = "/buy/{id}", method = RequestMethod.PUT)
+    void buyBook(@PathVariable Long id, @RequestBody BookStatus bookStatus) {
+        bookService.buyBook(id, bookStatus);
+    }
 }
