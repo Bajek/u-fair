@@ -5,7 +5,6 @@ import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.EnableTransactionManagement;
-import org.springframework.transaction.annotation.Transactional;
 import pl.ubytes.entities.Book;
 import pl.ubytes.entities.BookStatus;
 import pl.ubytes.error.BookError;

@@ -8,7 +8,6 @@ import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.domain.Sort;
 import org.springframework.data.web.PagedResourcesAssembler;
-import org.springframework.hateoas.PagedResources;
 import org.springframework.http.HttpEntity;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
@@ -16,10 +15,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import pl.ubytes.entities.Book;
 import pl.ubytes.entities.BookStatus;
-import pl.ubytes.repository.BookStatusRepository;
 import pl.ubytes.service.BookService;
-
-import java.util.List;
 
 /**
  * Created by Bajek on 05.12.2015.

@@ -1,10 +1,7 @@
 package pl.ubytes.entities;
 
-import com.fasterxml.jackson.annotation.JsonIgnore;
-
 import javax.persistence.*;
 import java.io.Serializable;
-import java.sql.Timestamp;
 
 /**
  * Created by Bajek on 05.12.2015.
@@ -14,7 +11,7 @@ import java.sql.Timestamp;
 public class Book implements Serializable {
 
     @Id
-    @GeneratedValue(strategy= GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private long bookId;
     @Column(nullable = false)
     private String author;
@@ -29,7 +26,8 @@ public class Book implements Serializable {
     private String image;
     private String remarks;
 
-    public Book() {}
+    public Book() {
+    }
 
     public String getAuthor() {
         return author;

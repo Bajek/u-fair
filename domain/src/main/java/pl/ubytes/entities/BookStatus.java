@@ -12,7 +12,7 @@ public class BookStatus implements Serializable {
 
 
     @Id
-    @GeneratedValue(strategy= GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private long status_id;
 
     @OneToOne
@@ -22,7 +22,8 @@ public class BookStatus implements Serializable {
     private String buyer;
 
 
-    public BookStatus() {}
+    public BookStatus() {
+    }
 
     public String getBuyer() {
         return buyer;
