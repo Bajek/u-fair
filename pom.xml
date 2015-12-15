@@ -44,4 +44,32 @@
         <module>server</module>
     </modules>
 
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-pmd-plugin</artifactId>
+                <version>3.5</version>
+                <configuration>
+                    <printFailingErrors>true</printFailingErrors>
+                    <linkXRef>true</linkXRef>
+                    <sourceEncoding>UTF-8</sourceEncoding>
+                    <minimumTokens>100</minimumTokens>
+                    <targetJdk>1.8</targetJdk>
+                    <rulesets>
+                        <ruleset>java-strictexception</ruleset>
+                    </rulesets>
+                </configuration>
+                <executions>
+                    <execution>
+                        <phase>compile</phase>
+                        <goals>
+                            <goal>check</goal>
+                            <goal>cpd-check</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+        </plugins>
+    </build>
 </project>

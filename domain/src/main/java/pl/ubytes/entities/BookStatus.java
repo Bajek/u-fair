@@ -13,6 +13,7 @@ public class BookStatus implements Serializable {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
+    @SuppressWarnings("PMD")
     private long status_id;
 
     @OneToOne

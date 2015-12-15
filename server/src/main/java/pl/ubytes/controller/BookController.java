@@ -18,7 +18,7 @@ import pl.ubytes.entities.BookStatus;
 import pl.ubytes.service.BookService;
 
 /**
- * Created by Bajek on 05.12.2015.
+ * Bajek
  */
 @RestController
 @RequestMapping("/api/books")

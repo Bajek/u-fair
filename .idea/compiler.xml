@@ -35,7 +35,7 @@
     <bytecodeTargetLevel>
       <module name="u-fair" target="1.6" />
       <module name="u-fair-domain" target="1.6" />
-      <module name="u-fair-server" target="1.7" />
+      <module name="u-fair-server" target="1.8" />
     </bytecodeTargetLevel>
   </component>
 </project>
